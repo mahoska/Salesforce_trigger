@@ -1,0 +1,40 @@
+Phase 1
+
+Employee   all*
+	First Name
+	Last Name
+	Birthday 
+	Superior  - Lookup to Employee
+	IT Department (Picklist)  QA, DEV, PMO, BA
+	Level (Global Pick List) (Trainee, ….)
+	isActive boolean)
+	Stard_Date   
+	End_Date
+	Duration   (format 5 years 2 months) formula
+	Remote boolean)
+	Part Time -(boolean)
+	Availability 1-8 hours
+	
+EmployeeSkills all*
+	M-M
+	Position - Picklist (Develoepr, Tester, Team Lead, Project Manager, Project Owner)
+	Assigned Time , (1-8 hours) Number
+	
+Project
+	*Start Date.
+	Priority ( Picklist (Hot,Hight, Medium, Low, Dead.)
+	Project Owner  Lookup to Employee
+	Tema Lead  Lookup to Employee
+	Project Duration  (format 5 years 2 months)
+	Hours   - Summary of all hours than employee spend   (20) Roll Up sum
+	Team  Members - 4 (Number)	Roll Up Sum
+
+
+
+Phase 2
+	1. Check dublication on Employee record by using First,Last, and Birthday condition
+	2. Check availability when assigning employee to project
+	
+	
+	//
+	3. When Part Time is false  Availability auto set to 8
