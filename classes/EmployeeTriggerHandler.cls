@@ -12,7 +12,7 @@ public class EmployeeTriggerHandler {
         }
         else if(Trigger.isInsert && Trigger.isAfter)
         {
- 			EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
+ 			EmployeeTriggerHelper.OnAfterInsert(Trigger.new);
         }
         else if(Trigger.isUpdate && Trigger.isBefore)
         {
@@ -20,7 +20,7 @@ public class EmployeeTriggerHandler {
         }
         else if(Trigger.isUpdate && Trigger.isAfter)
         {
- 			EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
+ 			EmployeeTriggerHelper.OnAfterUpdate(Trigger.new);
         }
         else if(Trigger.isDelete && Trigger.isBefore)
         {
