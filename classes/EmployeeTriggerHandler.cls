@@ -8,19 +8,19 @@ public class EmployeeTriggerHandler {
        
         if(Trigger.isInsert && Trigger.isBefore)
         {
-            EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
+            
         }
         else if(Trigger.isInsert && Trigger.isAfter)
         {
- 
+ 			EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
         }
         else if(Trigger.isUpdate && Trigger.isBefore)
         {
- 			EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
+ 			
         }
         else if(Trigger.isUpdate && Trigger.isAfter)
         {
- 
+ 			EmployeeTriggerHelper.OnBeforeInsertUpdate(Trigger.new);
         }
         else if(Trigger.isDelete && Trigger.isBefore)
         {

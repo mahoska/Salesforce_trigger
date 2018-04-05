@@ -1,6 +1,6 @@
 public with sharing class EmployeeSkillsTriggerHelper {
     
-	public static void OnBeforeInsertUpdate(List<EmployeeSkills__c> skills){
+	public static void OnAfterInsertUpdate(List<EmployeeSkills__c> skills){
         for(EmployeeSkills__c item: skills){
             List<AggregateResult> res = [
                 SELECT Employee__r.Id emId, SUM(Assigned_Time__c) assignedTime  

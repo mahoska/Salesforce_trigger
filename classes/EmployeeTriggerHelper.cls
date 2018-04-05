@@ -32,7 +32,7 @@ public with sharing class EmployeeTriggerHelper {
                       WHERE First_Name__c IN :firstNames AND
                       		Last_Name__c IN :lastNames AND 
                       		Birthday__c IN :birthdays  
-         					];
+         			];
          
          for (Employee__c insertItem : employees) {
              for(Employee__c errorItem : resDublicat){
