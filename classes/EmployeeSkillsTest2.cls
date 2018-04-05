@@ -28,22 +28,6 @@ private class EmployeeSkillsTest2 {
         insert emplSk;        
      }
 
-	@isTest 
-    static void TestOnAfterInsertUpdate() {
-        Date d = system.today();
-        EmployeeSkills__c emplSk1 = new EmployeeSkills__c(
-            Assigned_Time__c = 7, 
-            Employee__c = [SELECT Id FROM Employee__c WHERE  First_Name__c = 'Name' AND Last_Name__c='Surname' AND Birthday__c=: d].Id, 
-  			Project__c = [SELECT Id FROM Project__c WHERE Name = 'Test'].Id
-        );
-        Test.startTest();
-        	Database.SaveResult result = Database.insert(emplSk1, false);
-        Test.stopTest();
-        
-            System.assert(result.isSuccess());
-            System.assert(result.getErrors().size() == 0);
-    }
-    
     
     @isTest 
     static void TestOnAfterInsertUpdateForUpdateRecord() { 
